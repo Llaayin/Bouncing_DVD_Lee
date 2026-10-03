@@ -6,7 +6,7 @@ const CONFIG = {
     DVD_ASPECT_RATIO: 1.5,
     INITIAL_SIZE: 150,
     MIN_SIZE: 5,
-    SPEED: 5,
+    SPEED: 2,
     COLORS: [0x00FF00, 0xFF0000, 0x0000FF, 0xFFFF00, 0xFF00FF, 0x00FFFF]
 };
 
@@ -107,7 +107,7 @@ function update() {
         const nextColor = CONFIG.COLORS[Math.floor(Math.random() * CONFIG.COLORS.length)];
         dvdState.mesh.material.color.setHex(nextColor);
 
-        dvdState.size *= 0.85;
+        dvdState.size *= 0.55;
         
         if (dvdState.size < 0.1) dvdState.size = 0.1;
 
